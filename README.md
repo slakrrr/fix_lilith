@@ -55,4 +55,4 @@
    dotnet build
    ```
 
-构建的输出路径定义于 fixlilith.csproj 中的 \<OututPath> 项（第 13 行），默认输出到 游戏根目录下的 `BepInEx/plugins/FixLilith`
+构建的输出路径定义于 fixlilith.csproj 中的 \<OutputPath> 项（第 13 行），默认输出到 游戏根目录下的 `BepInEx/plugins/FixLilith`
