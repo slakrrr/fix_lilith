@@ -1,8 +1,8 @@
 # FixLilith
 
 ### 简介
-修复桌宠软件《不/存在的莉莉丝》在 linux (proton-ge11 + wayland) 下的闪烁问题
-目前仅在 GNOME 50 wayland 和 sway 下测试过
+- 修复桌宠软件《不/存在的莉莉丝》在 linux (proton-ge11 + wayland) 下的闪烁问题
+- 目前仅在 GNOME 50 wayland 和 sway 下测试过
 
 ### 已知问题
 1. 鼠标追踪不生效
