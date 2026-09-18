@@ -3,6 +3,12 @@
 ### 简介
 修复桌宠软件《不/存在的莉莉丝》在 linux (proton-ge11 + wayland) 下的闪烁问题
 
+### 已知问题
+1. 鼠标追踪不生效
+2. 控制台会持续报错"Client area does not match virtual screen yet. ..."
+3. 无法置顶
+4. 无法坐到其他窗口上
+
 ### 使用教程
 #### 前置条件
 - Proton-GE 11 x64 (理论上任意子版本均可，本项目测试时使用Proton-GE 11.7）
