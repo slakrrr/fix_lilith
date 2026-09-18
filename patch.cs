@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using HarmonyLib;
 
 
-[BepInPlugin("com.slakr.fixlilith", "FixLilith", "1.0.0")]
+[BepInPlugin("com.slakr.fixlilith", "FixLilith", "1.1.0")]
 public class FixLilithPlugin : BasePlugin {
     public override void Load() {
         var harmony = new Harmony("com.slakr.fixlilith");
