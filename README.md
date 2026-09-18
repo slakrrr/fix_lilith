@@ -2,21 +2,21 @@
 
 ### 简介
 修复桌宠软件《不/存在的莉莉丝》在 linux (proton-ge11 + wayland) 下的闪烁问题
+目前仅在 GNOME 50 wayland 和 sway 下测试过
 
 ### 已知问题
 1. 鼠标追踪不生效
 2. 控制台会持续报错"Client area does not match virtual screen yet. ..."
-3. 无法置顶
-4. 无法坐到其他窗口上
+3. 无法坐到其他窗口上
 
 ### 使用教程
 #### 前置条件
-- Proton-GE 11 x64 (理论上任意子版本均可，本项目测试时使用Proton-GE 11.7）
+- Proton-GE 11 x64 (理论上任意子版本均可，本项目测试时使用Proton-GE 11.7 和 11.1）
 - 支持 Unity-IL2CPP 的 BepInEx windows x64
 
 #### 一、 安装Proton-GE 11
 1. 下载 Proton-GE 11。你可以在官方仓库的 [release](https://github.com/GloriousEggroll/proton-ge-custom/releases) 页下载最新的 x86_64 构建
-2. 在 steam 根目录下找到 compatibilitytools.d 文件夹（若没有则新建）。Steam 根目录可以在库中任意选择一款游戏->查看本地文件，此时会打开 `.../Steam/steamapps/common/The NOexistenceN of Lilith`，路径中的 Steam 就是 steam 根目录
+2. 在 steam 根目录下找到 compatibilitytools.d 文件夹（若没有则新建）。若你不知道 Steam 根目录在哪里，可以在库中任意选择一款游戏->查看本地文件，此时会打开 `.../Steam/steamapps/common/xxx`，路径中的 Steam 就是 steam 根目录
 3. 将下载的 proton-ge 11 压缩包解压到 compatibilitytools.d
 4. 重启 steam，之后在本游戏的兼容性选项中选择刚才安装的 proton-ge 版本
 
@@ -29,7 +29,7 @@
   ```
   WINEDLLOVERRIDES="winhttp=n,b" %command%
   ```
-4. 启动一次游戏，此时你应该能看到一个命令提示符窗口先行启动，并卡住一段时间，这是 BepInEx 初次启动时下载依赖库，等待至游戏本体启动即可。若用时过长或持续失败，请尝试修改网络配置
+4. 启动一次游戏，此时你应该能看到一个命令提示符窗口先行启动，并卡住一段时间，这是 BepInEx 在初次启动时下载UnityBaseLibrary，等待至游戏本体启动即可。若用时过长或持续失败，请尝试修改网络配置，或自行下载对应版本的 UnityBaseLibrary，之后将压缩包放在 `BepInEx/unity-libs` 目录下。你可以在 `BepInEx/config/BepInEx.cfg` 中搜索 `UnityBaseLibrariesSource` 关键字来查看目标 url
 
 更详细的 BepInEx Unity-IL2CPP 安装教程，可以参考 [官方文档](https://docs.bepinex.dev/master/articles/user_guide/installation/unity_il2cpp.html)
 
