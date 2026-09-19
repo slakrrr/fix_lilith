@@ -34,7 +34,7 @@
 更详细的 BepInEx Unity-IL2CPP 安装教程，可以参考 [官方文档](https://docs.bepinex.dev/master/articles/user_guide/installation/unity_il2cpp.html)
 
 #### 三、安装本补丁
-1. 在 [发布页面](./releases) 下载最新的 dll 文件
+1. 在 [发布页面](../../releases) 下载最新的 dll 文件
 2. 在游戏根目录中找到 `BepInEx/plugins` ，创建 `FixLilith` 文件夹（你可以自定义文件夹的名称，这只是为了方便区分不同的补丁文件）
 3. 将 dll 文件复制到 `FixLilith` 文件夹中
 
