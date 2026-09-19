@@ -26,7 +26,7 @@
 1. 下载 BepInEx Unity-IL2CPP-win-x64 的最新构建。目前只有 BepInEx 6.0 bleeding edge 可以使用，你可以在 [这里](https://builds.bepinex.dev/projects/bepinex_be) 找到
 2. 将压缩包中的内容解压到游戏根目录（如果你不知道在哪，在 steam 库页面中，选中本游戏（不/存在的莉莉丝），选择管理->浏览本地文件，即可轻松找到）。注意这一步完成后， winhttp.dll（BepInEx 的注入 dll）应该与 Lilith.exe（游戏本体）处于同一级目录中
 3. 在游戏启动项中输入
-  ```
+  ```Launch Option
   WINEDLLOVERRIDES="winhttp=n,b" %command%
   ```
 4. 启动一次游戏，此时你应该能看到一个命令提示符窗口先行启动，并卡住一段时间，这是 BepInEx 在初次启动时下载UnityBaseLibrary，等待至游戏本体启动即可。若用时过长或持续失败，请尝试修改网络配置，或自行下载对应版本的 UnityBaseLibrary，之后将压缩包放在 `BepInEx/unity-libs` 目录下。你可以在 `BepInEx/config/BepInEx.cfg` 中搜索 `UnityBaseLibrariesSource` 关键字来查看目标 url
@@ -40,7 +40,7 @@
 
 #### 四、其他必要启动项
 你需要在游戏启动项中添加 `WINE_LAYERED_OVERLAY_ALPHA=1` ，以便桌宠可以正常渲染与交互。目前这是 GE 版本的 Proton 独有的，也因此你需要Proton-GE。最终的启动项是：
-  ```
+  ```Launch Option
   WINEDLLOVERRIDES="winhttp=n,b" WINE_LAYERED_OVERLAY_ALPHA=1 %command%
   ```
 值得一提的是，`%command%` 是 steam 生成的用于启动游戏本体的命令，因此在 linux 版本中添加启动项需要注意其他参数与 %command% 的相对位置
@@ -60,11 +60,11 @@
    cd fix_lilith
    ```
 2. 修改 fixlilith.csproj
-   1. 找到 \<BepInEx>/home/slakr/.local/share/Steam/steamapps/common/The NOexistenceN of Lilith/BepInEx\</BepInEx> 行（第 11 行）
+   1. 找到 `<BepInEx>/home/slakr/.local/share/Steam/steamapps/common/The NOexistenceN of Lilith/BepInEx\</BepInEx>` 行（第 11 行）
    2. 将其修改为你的实际 BepInEx 安装路径
 3. 构建
    ```bash
    dotnet build
    ```
 
-构建的输出路径定义于 fixlilith.csproj 中的 \<OutputPath> 项（第 13 行），默认输出到 游戏根目录下的 `BepInEx/plugins/FixLilith`
+构建的输出路径定义于 fixlilith.csproj 中的 `<OutputPath>` 项（第 13 行），默认输出到 游戏根目录下的 `BepInEx/plugins/FixLilith`
