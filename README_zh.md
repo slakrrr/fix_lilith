@@ -45,6 +45,11 @@
   ```
 值得一提的是，`%command%` 是 steam 生成的用于启动游戏本体的命令，因此在 linux 版本中添加启动项需要注意其他参数与 %command% 的相对位置
 
+#### 五、去除 BepInEx 控制台窗口（可选）
+1. 在游戏根目录中找到并打开 `BepInEx/config/BepInEx.cfg` 文件
+2. 在文件中找到 `[Logging.Console]` 节，将其键 `Enabled` 的值设为 `false`
+3. 保存并关闭文件
+
 ### 构建教程
 - 需要 dotnet 10。可参考 [官方文档](https://learn.microsoft.com/dotnet/core/install/linux?WT.mc_id=dotnet-35129-website)
 - 需要 支持 Unity-IL2CPP 的 BepInEx
