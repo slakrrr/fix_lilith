@@ -1,5 +1,7 @@
 **AI-translated**
 
+**Note: This patch is incompatible after an update around November 3rd.**
+
 # FixLilith
 
 ### Introduction
